@@ -23,7 +23,7 @@ CHECK_ROOT(){
 }
 
 VALIDATE(){
-    if [ $? -ne 0 ]
+    if [ $4 -ne 0 ]
     then
         echo  "$2 is...FAILED"  
         exit 1
