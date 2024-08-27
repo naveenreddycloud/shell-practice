@@ -44,15 +44,15 @@ VALIDATE $? "enabled mysql server"
 systemctl start mysqld
 VALIDATE $? "started mysqld"
 
-mysql -h mysql.naveenreddy.online -u root -pExpenseApp@1 -e 'show databases;'
-if [ $? -ne 0 ]
-    then 
-        echo " MySQL root password is not setup, setting now"
-        mysql_secure_installation --set-root-pass ExpenseApp@1
-        VALIDATE $? "setting up root password"
-    else
-        echo "MySQL root password is already setup... SKIPPING"
-fi
+# mysql -h mysql.naveenreddy.online -u root -pExpenseApp@1 -e 'show databases;'
+# if [ $? -ne 0 ]
+#     then 
+#         echo " MySQL root password is not setup, setting now"
+#         mysql_secure_installation --set-root-pass ExpenseApp@1
+#         VALIDATE $? "setting up root password"
+#     else
+#         echo "MySQL root password is already setup... SKIPPING"
+# fi
 
 service mysqld status
 VALIDATE $? "service running"
