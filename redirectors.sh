@@ -53,3 +53,7 @@ if [ $? -ne 0 ]
     else
         echo "MySQL root password is already setup... SKIPPING"
 fi
+
+service mysqld status
+VALIDATE $? "service running"
+
