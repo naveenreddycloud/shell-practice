@@ -23,7 +23,7 @@ CHECK_ROOT(){
 }
 
 VALIDATE(){
-    if [ $4 -ne 0 ]
+    if [ $1 -ne 0 ]
     then
         echo  "$2 is...FAILED"  
         exit 1
@@ -37,3 +37,9 @@ CHECK_ROOT
 
 dnf install mysql-server -y 
 VALIDATE $? "installing my sql server"
+
+systemctl enable mysqld
+VALIDATE $? "enabled mysql server"
+
+systemctl start mysqld
+VALIDATE $? "started mysqld"
