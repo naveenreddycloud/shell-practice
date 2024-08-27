@@ -33,3 +33,4 @@ VALIDATE(){
 }
 
 echo "Script started executing at: $(date)"
+CHECK_ROOT
