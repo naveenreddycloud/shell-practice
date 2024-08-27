@@ -25,15 +25,15 @@ CHECK_ROOT(){
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo  "$2 is...FAILED"  
+        echo  "$3 is...FAILED"  
         exit 1
     else
-        echo "$2 is...  SUCCESS" 
+        echo "$3 is...  SUCCESS" 
     fi
 }
 
 echo "Script started executing at: $(date)"
 CHECK_ROOT
 
-dnf install mysql server -y 
-VALIDATE $? 
+dnf install mysql-server -y 
+VALIDATE $? "installing my sql server"
