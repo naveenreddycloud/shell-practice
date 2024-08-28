@@ -20,10 +20,10 @@ CHECK_ROOT(){
 
     if [ $USERID -ne 0 ]
         then
-            echo "Please run this scripit with root user" | tee -a $LOG_FILE
+            echo -e "$R Please run this scripit with root user $N" | tee -a $LOG_FILE
             exit 1
         else 
-            echo "This Scripit excuting with Root user" | tee -a $LOG_FILE
+            echo "$Y This Scripit excuting with Root user $N" | tee -a $LOG_FILE
     fi
 }
 
@@ -31,14 +31,14 @@ VALIDATE(){
 
     if [ $1 -ne 0 ]
         then
-            echo "$2...is FAILED" | tee -a $LOG_FILE
+            echo "$2...is $R FAILED" | tee -a $LOG_FILE
             exit 1
         else
-            echo "$2....is SUCCESS" | tee -a $LOG_FILE
+            echo "$2....is $G SUCCESS" | tee -a $LOG_FILE
     fi
 }
 
-echo "Scripit strated executing at : $(date)"
+echo -e "Scripit strated executing at : $($G date $N)"
 
 CHECK_ROOT
 
@@ -59,7 +59,7 @@ if [ $? -ne 0 ]
         mysql_secure_installation --set-root-pass ExpenseApp@1
         VALIDATE $? "Setting up root Password"
     else
-        echo "MySql root password is already created ...Now Skipping" | tee -a $LOG_FILE
+        echo -e "$R MySql root password is already created ...$Y Now Skipping $N" | tee -a $LOG_FILE
 fi
 
 
