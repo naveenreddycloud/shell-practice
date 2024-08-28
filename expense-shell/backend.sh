@@ -54,10 +54,11 @@ VALIDATE $? "Installed Nodejs"
 id expense &>>$LOG_FILE
 if [ $? -ne 0 ]
     then
-        echo "expense user already exits... creating"
+        echo "expense user not exits... creating"
         useradd expense
         VALIDATE $? "creating expense user"
     else
+        echo "expense user already exits ..SKIPPING"
 fi
 
 mkdir /app 
