@@ -31,14 +31,14 @@ VALIDATE(){
 
     if [ $1 -ne 0 ]
         then
-            echo "$2...is $R FAILED" | tee -a $LOG_FILE
+            echo -e "$2...is $R FAILED" | tee -a $LOG_FILE
             exit 1
         else
-            echo "$2....is $G SUCCESS" | tee -a $LOG_FILE
+            echo -e "$2....is $G SUCCESS" | tee -a $LOG_FILE
     fi
 }
 
-echo -e "Scripit strated executing at : $($G date $N)"
+echo  "Scripit strated executing at : $(date)" | tee -a $LOG_FILE
 
 CHECK_ROOT
 
