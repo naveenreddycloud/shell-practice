@@ -20,10 +20,10 @@ CHECK_ROOT(){
 
     if [ $USERID -ne 0 ]
         then
-            echo -e "$R Please run this scripit with root user $N" | tee -a $LOG_FILE
+            echo -e "$R Please run this script with root user $N" | tee -a $LOG_FILE
             exit 1
         else 
-            echo -e "$Y This Scripit excuting with Root user $N" | tee -a $LOG_FILE
+            echo -e "$Y This Script excuting with Root user $N" | tee -a $LOG_FILE
     fi
 }
 
