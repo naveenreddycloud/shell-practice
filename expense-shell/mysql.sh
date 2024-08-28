@@ -34,7 +34,7 @@ VALIDATE(){
             echo "$2...is FAILED" | tee -a $LOG_FILE
             exit 1
         else
-            echo "echo $2....is SUCCESS" | tee -a $LOG_FILE
+            echo "$2....is SUCCESS" | tee -a $LOG_FILE
     fi
 }
 
