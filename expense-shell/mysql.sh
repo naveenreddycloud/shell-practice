@@ -23,7 +23,7 @@ CHECK_ROOT(){
             echo -e "$R Please run this scripit with root user $N" | tee -a $LOG_FILE
             exit 1
         else 
-            echo "$Y This Scripit excuting with Root user $N" | tee -a $LOG_FILE
+            echo -e "$Y This Scripit excuting with Root user $N" | tee -a $LOG_FILE
     fi
 }
 
