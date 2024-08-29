@@ -47,8 +47,7 @@ echo "files:$FILES"
 if [ ! -z $FILES ]
 then
     echo "files are found"
-else
-    echo "files are not found $DAYS"
+
 fi
 
 
