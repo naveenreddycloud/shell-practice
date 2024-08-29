@@ -55,7 +55,7 @@ then
 
     if [ -f $ZIP_FILE ]
     then 
-        echo "sucessfully zip file created"
+        echo "sucessfully zip files older than $DAYS"
          while IFS= read -r file #IFS,internal field seperatpor, empty it will ignore while space.-r is for not to ingore special charecters like /
         do
             echo "Deleting file: $file"
