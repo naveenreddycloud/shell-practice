@@ -12,7 +12,7 @@ Y="\e[33m"
 
 USAGE(){
 
-    echo -e " $R Usage:: $N to excute this scripit $G (${0}) $N user must pass arguments like <SOURCEFILE> <DESTINATIONFILE> <DAYS(Optional)>"
+    echo -e " $R Usage:: $N to excute this scripit $G ${0} $N user must pass arguments like <SOURCEFILE> <DESTINATIONFILE> <DAYS(Optional)>"
 
 }
 
@@ -21,5 +21,15 @@ if [ $# -lt 2 ]
         USAGE 
         exit 1
 fi
+
+if [ -d $SOURCE_DIRECTORY ]
+    then
+        echo "$SOURCE_DIRECTORY is presents ..."
+    else 
+        echo "$SOURCE_DIRECTORY is not presents .."
+        USAGE
+        exit 1
+fi
+ 
 
     
