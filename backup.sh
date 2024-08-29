@@ -31,4 +31,14 @@ if [ -d $SOURCE_DIRECTORY ]
 fi
 
 
+if [ -d $DESTINATION_DIRECTORY ]
+    then
+        echo "$DESTINATION_DIRECTORY is presents ..."
+    else 
+        echo "$DESTINATION_DIRECTORY is not presents .."
+        exit 1
+fi
+
+
+
     
