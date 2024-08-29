@@ -40,7 +40,7 @@ if [ -d $DESTINATION_DIRECTORY ]
 fi
 
 
-FILES=$(find ${SOURCE_DIRECTORY} -name "*.log" -mtime +$DAYS)
+FILES=$(find ${SOURCE_DIRECTORY} -name "*.log" -mtime $DAYS)
 
 echo "files:$FILES"
 
@@ -66,7 +66,7 @@ then
         exit 1
     fi
 else
-    echo "No files older than +$DAYS"
+    echo "No files older than $DAYS"
 fi
 
 
