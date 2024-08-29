@@ -53,7 +53,21 @@ then
 
 fi
 
-
+if [ -f $ZIP_FILE ]
+    then 
+        echo "sucessfully zip file created"
+         while IFS= read -r file #IFS,internal field seperatpor, empty it will ignore while space.-r is for not to ingore special charecters like /
+        do
+            echo "Deleting file: $file"
+            rm -rf $file
+        done <<< $FILES
+    else
+         echo "Zipping the files is failed"
+        exit 1
+    fi
+else
+    echo "No files older than $DAYS"
+fi
 
 
     
