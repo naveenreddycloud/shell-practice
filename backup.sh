@@ -27,9 +27,8 @@ if [ -d $SOURCE_DIRECTORY ]
         echo "$SOURCE_DIRECTORY is presents ..."
     else 
         echo "$SOURCE_DIRECTORY is not presents .."
-        USAGE
         exit 1
 fi
- 
+
 
     
