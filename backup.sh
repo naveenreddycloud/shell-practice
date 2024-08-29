@@ -44,7 +44,7 @@ FILES=$(find ${SOURCE_DIRECTORY} -name "*.log" -mtime $DAYS)
 
 echo "files:$FILES"
 
-
+if [ ! -z $FILES ]
 then
     echo "files are found"
     ZIP_FILE="$DESTINATION_DIRECTORY/app-logs-$TIMESTAMP.zip"
