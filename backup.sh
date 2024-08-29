@@ -12,7 +12,7 @@ Y="\e[33m"
 
 USAGE(){
 
-    echo -e " $R Usage:: $N to excute this scripit $0 user must pass arguments like <SOURCEFILE> <DESTINATIONFILE> <DAYS(Optional)>"
+    echo -e " $R Usage:: $N to excute this scripit $G (${0}) $N user must pass arguments like <SOURCEFILE> <DESTINATIONFILE> <DAYS(Optional)>"
 
 }
 
