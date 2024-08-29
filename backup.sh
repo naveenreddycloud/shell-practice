@@ -44,7 +44,7 @@ FILES=$(find ${SOURCE_DIRECTORY} -name "*.log" -mtime +$DAYS)
 
 echo "files:$FILES"
 
-if [ ! -z $FILES ]
+if [! -z $FILES]
 then
     echo "files are found"
 fi
