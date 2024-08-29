@@ -2,7 +2,7 @@
 
 SOURCE_DIRECTORY=${1}
 DESTINATION_DIRECTORY=${2}
-DAYS=${3:-14}
+DAYS=${3}
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 
 R="\e[31m"
