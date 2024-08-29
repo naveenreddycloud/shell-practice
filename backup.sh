@@ -42,7 +42,7 @@ fi
 
 FILES=$(find ${SOURCE_DIRECTORY} -name "*.log" -mtime $DAYS)
 
-# echo "files:$FILES"
+echo "files:$FILES"
 
 if [ ! -z $FILES ]
 
