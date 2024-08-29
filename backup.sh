@@ -27,7 +27,7 @@ if [ -d $SOURCE_DIRECTORY ]
         echo "$SOURCE_DIRECTORY is presents ..."
     else 
         echo "$SOURCE_DIRECTORY is not presents .."
-        exit 1
+        
 fi
 
 
@@ -36,7 +36,7 @@ if [ -d $DESTINATION_DIRECTORY ]
         echo "$DESTINATION_DIRECTORY is presents ..."
     else 
         echo "$DESTINATION_DIRECTORY is not presents .."
-        exit 1
+        
 fi
 
 
