@@ -47,7 +47,6 @@ echo "files:$FILES"
 if [ ! -z $FILES ]
 then
     echo "files are found"
-
 fi
 
 
