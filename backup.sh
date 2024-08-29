@@ -46,7 +46,10 @@ echo "files:$FILES"
 
 if [ -z $FILES ]
 then
-    echo "$FILES are found"
+    echo "files are found"
+    ZIP_FILE="$DESTINATION_DIRECTORY/app-logs-$TIMESTAMP.zip"
+    find ${SOURCE_DIRECTORY} -name "*.log" -mtime $DAYS | zip "$ZIP_FILE" -@
+
 fi
 
 
