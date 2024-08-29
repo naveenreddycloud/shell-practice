@@ -51,9 +51,9 @@ then
     ZIP_FILE="$DESTINATION_DIRECTORY/app-logs-$TIMESTAMP.zip"
     find ${SOURCE_DIRECTORY} -name "*.log" -mtime $DAYS | zip "$ZIP_FILE" -@
 
-fi
 
-if [ -f $ZIP_FILE ]
+
+    if [ -f $ZIP_FILE ]
     then 
         echo "sucessfully zip file created"
          while IFS= read -r file #IFS,internal field seperatpor, empty it will ignore while space.-r is for not to ingore special charecters like /
@@ -66,7 +66,7 @@ if [ -f $ZIP_FILE ]
         exit 1
     fi
 else
-    echo "No files older than $DAYS"
+    echo "No files older than +$DAYS"
 fi
 
 
