@@ -40,7 +40,7 @@ if [ -d $DESTINATION_DIRECTORY ]
 fi
 
 
-FILES=$(find ${SOURCE_DIRECTORY} -name "*.log" -mtime +14)
+FILES=$(find ${SOURCE_DIRECTORY} -name "*.log" -mtime $DAYS)
 
 echo "files: $FILES"
 
