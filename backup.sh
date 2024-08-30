@@ -2,7 +2,7 @@
 
 SOURCE_DIRECTORY=${1}
 DESTINATION_DIRECTORY=${2}
-DAYS=${3:-14}
+DAYS=${3}
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 
 R="\e[31m"
@@ -40,11 +40,11 @@ if [ -d $DESTINATION_DIRECTORY ]
 fi
 
 
-FILES=$(find ${SOURCE_DIRECTORY} -name "*.log" -mtime )
+FILES=$(find ${SOURCE_DIRECTORY} -name "*.log" -mtime $DAYS)
 
 echo "files: $FILES"
 
-if [ ! -z $FILES ]
+if [ ! -z $FILES ]  #true if FILES is empty, ! nakes it expression false
 
 then
     echo "files are found"
