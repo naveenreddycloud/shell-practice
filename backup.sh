@@ -2,7 +2,7 @@
 
 SOURCE_DIRECTORY=${1}
 DESTINATION_DIRECTORY=${2}
-DAYS=${3: -14}
+DAYS=${3:-14}
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 
 R="\e[31m"
@@ -40,7 +40,7 @@ if [ -d $DESTINATION_DIRECTORY ]
 fi
 
 
-FILES=$(find ${SOURCE_DIRECTORY} -name "*.log" -mtime $DAYS)
+FILES=$(find ${SOURCE_DIRECTORY} -name "*.log" -mtime )
 
 echo "files: $FILES"
 
