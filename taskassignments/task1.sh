@@ -9,11 +9,9 @@ if [ $# -lt 2 ]
 then
         USAGE
 fi
-if [ -f $FILEPATH ]
+if [ ! -f $FILEPATH ]
 then
-        echo "File exist"
-else
-        echo "File Doesn't exit"
+        echo "File not exist"
 fi
 count=$(cat $FILEPATH | grep $SEARCH_WORD | wc -l)
 echo "$SEARCH_WORD "=" $count"
