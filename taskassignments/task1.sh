@@ -12,6 +12,7 @@ fi
 if [ ! -f $FILEPATH ]
 then
         echo "File not exist"
+        exit 1
 fi
 count=$(cat $FILEPATH | grep $SEARCH_WORD | wc -l)
 echo "$SEARCH_WORD "=" $count"
